@@ -52,7 +52,7 @@ function getAuthHeader() {
     return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
-const BACKEND_URL = import.meta.env.DEV ? "" : "https://zeroleak-v2.onrender.com";
+const BACKEND_URL = import.meta.env.DEV ? "" : "https://zeroleak-v3.onrender.com";
 const API = `${BACKEND_URL}/api/zmail`;
 
 export function ZMailProvider({ children }) {

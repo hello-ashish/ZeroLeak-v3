@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://zeroleak-v2.onrender.com/api/:path*"
+      "destination": "https://zeroleak-v3.onrender.com/api/:path*"
     },
     {
       "source": "/proctoring/:path*",
-      "destination": "https://zeroleak-v2.onrender.com/proctoring/:path*"
+      "destination": "https://zeroleak-v3.onrender.com/proctoring/:path*"
     },
     {
       "source": "/socket.io/:path*",
-      "destination": "https://zeroleak-v2.onrender.com/socket.io/:path*"
+      "destination": "https://zeroleak-v3.onrender.com/socket.io/:path*"
     },
     {
       "source": "/(.*)",

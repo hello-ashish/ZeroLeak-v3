@@ -121,7 +121,7 @@ export function ZMailMessageView({ message, onBack, onRefresh, onUpdate, hideHea
             }
 
             const headers = getAuthHeader();
-            const BACKEND_URL = import.meta.env.DEV ? '' : 'https://zeroleak-v2.onrender.com';
+            const BACKEND_URL = import.meta.env.DEV ? '' : 'https://zeroleak-v3.onrender.com';
             const url = `${BACKEND_URL}/api/zmail/messages/${message._id}/attachments/${att._id}`;
             const response = await fetch(url, { headers });
             if (!response.ok) throw new Error('Download failed');

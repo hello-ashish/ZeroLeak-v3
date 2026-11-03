@@ -37,7 +37,7 @@ export const isOriginAllowed = (origin) => {
         if (host === "zero-leak-v2.vercel.app" || host.endsWith(".vercel.app")) return true;
 
         // Allow Render domains
-        if (host === "zeroleak-v2.onrender.com" || host.endsWith(".onrender.com")) return true;
+        if (host === "zeroleak-v3.onrender.com" || host === "zeroleak-v2.onrender.com" || host.endsWith(".onrender.com")) return true;
     } catch (_) {
         return false;
     }

@@ -25,7 +25,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { io } from "socket.io-client";
 
-const BACKEND_URL        = import.meta.env.DEV ? "" : "https://zeroleak-v2.onrender.com";
+const BACKEND_URL        = import.meta.env.DEV ? "" : "https://zeroleak-v3.onrender.com";
 const SOCKET_URL         = `${BACKEND_URL}/proctoring`;
 const HEARTBEAT_INTERVAL = 10_000; // 10 s
 

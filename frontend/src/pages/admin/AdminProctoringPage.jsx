@@ -31,7 +31,7 @@ import {
     Brain, AlertCircle, Shield, Users, TrendingUp
 } from "lucide-react";
 
-const BACKEND_URL = import.meta.env.DEV ? "" : "https://zeroleak-v2.onrender.com";
+const BACKEND_URL = import.meta.env.DEV ? "" : "https://zeroleak-v3.onrender.com";
 const API        = `${BACKEND_URL}/api`;
 const SOCKET_URL = `${BACKEND_URL}/proctoring`;
 

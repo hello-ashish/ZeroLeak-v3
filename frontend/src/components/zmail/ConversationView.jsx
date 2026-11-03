@@ -41,7 +41,7 @@ export function ConversationView({ entry, onBack, onRefresh }) {
                 // Optimistically decrease unread count
                 setUnreadCount(prev => Math.max(0, prev - 1));
                 
-                const BACKEND_URL = import.meta.env.DEV ? "" : "https://zeroleak-v2.onrender.com";
+                const BACKEND_URL = import.meta.env.DEV ? "" : "https://zeroleak-v3.onrender.com";
                 await axios.patch(`${BACKEND_URL}/api/zmail/threads/${entry.threadId}/read`, {}, {
                     headers: getAuthHeader()
                 });
