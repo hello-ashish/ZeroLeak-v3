@@ -1,0 +1,63 @@
+paths:
+  /api/students/login:
+    post:
+      summary: Login for students
+      tags: [Student]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                studentId:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login successful
+  /api/students/register:
+    post:
+      summary: Register a new student (Admin only)
+      tags: [Student]
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Student registered
+  /api/students:
+    get:
+      summary: Get all students (Admin only)
+      tags: [Student]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of students
+  /api/students/exams:
+    get:
+      summary: Get available exams for logged in student
+      tags: [Student]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of exams
+  /api/students/results:
+    get:
+      summary: Get exam results for logged in student
+      tags: [Student]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Results retrieved
+    post:
+      summary: Submit an exam result
+      tags: [Student]
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Result submitted successfully

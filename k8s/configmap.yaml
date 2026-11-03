@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: zeroleak-config
+  namespace: zeroleak
+  labels:
+    app.kubernetes.io/name: zeroleak
+    app.kubernetes.io/part-of: zeroleak-platform
+data:
+  PORT: "4000"
+  NODE_ENV: "production"
+  CORS_ORIGIN: "http://localhost:5173,http://localhost:80,http://localhost"
+  ACCESS_TOKEN_EXPIRY: "1d"
+  AI_MODEL: "openai/gpt-oss-20b"
+  DOTENV_CONFIG_QUIET: "true"
+
+  FABRIC_ENABLED: "true"
+  FABRIC_CHANNEL_NAME: "zeroleak-channel"
+  FABRIC_CHAINCODE_NAME: "zeroleak"
+  FABRIC_MSP_ID: "Org1MSP"
+  FABRIC_CRYPTO_PATH: ""
+  FABRIC_CERT_DIRECTORY_PATH: "/app/fabric-crypto/certs"
+  FABRIC_KEY_DIRECTORY_PATH: "/app/fabric-crypto/keys"
+  FABRIC_TLS_CERT_PATH: "/app/fabric-crypto/tls/ca.crt"
+  FABRIC_PEER_ENDPOINT: "host.docker.internal:7051"
+  FABRIC_PEER_HOST_ALIAS: "peer0.org1.example.com"
+  FABRIC_CONNECT_TIMEOUT_MS: "30000"
+  FABRIC_ENDORSE_TIMEOUT_MS: "30000"
+  FABRIC_SUBMIT_TIMEOUT_MS: "60000"
+  FABRIC_COMMIT_STATUS_TIMEOUT_MS: "60000"

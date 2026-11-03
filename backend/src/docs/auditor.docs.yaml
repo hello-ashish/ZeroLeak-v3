@@ -1,0 +1,50 @@
+paths:
+  /api/auditor/login:
+    post:
+      summary: Login for auditors
+      tags: [Auditor]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login successful
+  /api/auditor/register:
+    post:
+      summary: Register a new auditor
+      tags: [Auditor]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        "201":
+          description: Auditor registered
+  /api/auditor/metrics:
+    get:
+      summary: Get dashboard metrics for auditors
+      tags: [Auditor]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Dashboard metrics retrieved
+  /api/auditor/anomalies:
+    get:
+      summary: Get exam anomalies
+      tags: [Auditor]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of anomalies

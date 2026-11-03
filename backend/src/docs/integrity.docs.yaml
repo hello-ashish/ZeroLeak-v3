@@ -1,0 +1,191 @@
+paths:
+  /api/integrity/fabric-status:
+    get:
+      summary: GET /fabric-status
+      tags: [Integrity]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/ledger-height:
+    get:
+      summary: GET /ledger-height
+      tags: [Integrity]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/recent:
+    get:
+      summary: GET /recent
+      tags: [Integrity]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/result/{resultId}:
+    get:
+      summary: GET /result/:resultId
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: resultId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/question/{questionId}:
+    get:
+      summary: GET /question/:questionId
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: questionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/exam/{examId}:
+    get:
+      summary: GET /exam/:examId
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: examId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/event/{eventId}:
+    get:
+      summary: GET /event/:eventId
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: eventId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/commitment/{commitmentId}:
+    get:
+      summary: GET /commitment/:commitmentId
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: commitmentId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/commitment/{commitmentId}/history:
+    get:
+      summary: GET /commitment/:commitmentId/history
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: commitmentId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/outbox/pending:
+    get:
+      summary: GET /outbox/pending
+      tags: [Integrity]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/integrity/outbox/{entityType}/{entityId}:
+    get:
+      summary: GET /outbox/:entityType/:entityId
+      tags: [Integrity]
+      parameters:
+        - in: path
+          name: entityType
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: entityId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error

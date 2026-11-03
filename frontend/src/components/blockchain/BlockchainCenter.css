@@ -1,0 +1,737 @@
+/* BlockchainCenter.css */
+.blockchain-center {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+    width: 100%;
+    min-height: 100%;
+}
+
+.bc-section-panel {
+    width: 100%;
+}
+
+.mode-switch {
+    display: flex;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-default);
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.mode-btn:hover {
+    background: var(--bg-hover);
+}
+
+.mode-btn.active.real {
+    background: var(--brand-primary);
+    color: white;
+}
+
+.mode-btn.active.mock {
+    background: var(--brand-accent);
+    color: white;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 24px;
+}
+
+.main-panel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.side-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-badge.connected {
+    background: #059669;
+    color: #d1fae5;
+}
+
+.status-badge.unavailable {
+    background: #dc2626;
+    color: #fee2e2;
+}
+
+.status-badge.demo {
+    background: #8b5cf6;
+    color: #ede9fe;
+}
+
+/* Blocks Visualization */
+.ledger-visualizer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.blockchain-block {
+    background: var(--bg-elevated);
+    border: 1px solid var(--brand-primary-border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.blockchain-block:hover {
+    transform: translateX(4px);
+    border-color: var(--brand-primary);
+}
+
+.blockchain-block.mock {
+    border-color: rgba(139, 92, 246, 0.4);
+}
+.blockchain-block.mock:hover {
+    border-color: var(--brand-accent);
+}
+.blockchain-block.tampered {
+    border-color: var(--danger);
+    background: var(--danger-subtle);
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.block-hash {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    word-break: break-all;
+}
+
+.arrow-down {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-size: 16px;
+    margin: -4px 0;
+}
+
+/* Controls */
+.controls-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-demo {
+    background: var(--brand-accent);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+.btn-demo:hover { background: #7c3aed; }
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-default);
+    font-size: 13px;
+}
+.data-row:last-child {
+    border-bottom: none;
+}
+.data-row span:first-child {
+    color: var(--text-secondary);
+}
+.data-row span:last-child {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* =========================================
+   MOCK BLOCKCHAIN LAB STYLES
+   ========================================= */
+
+.mock-lab-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mock-lab-header {
+    margin-bottom: 8px;
+}
+
+.mock-control-bar {
+    background: var(--bg-surface);
+}
+
+.mock-control-bar .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+}
+
+.control-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mock-select {
+    padding: 8px 12px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Stats Bar */
+.mock-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.stat-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Canvas */
+.mock-blockchain-canvas {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 60px 40px;
+    overflow-x: auto;
+    position: relative;
+    /* subtle background grid */
+    background-image: 
+        radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.blockchain-flow {
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+    padding-bottom: 16px;
+}
+
+.chain-link {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    position: relative;
+    margin: 0 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    border-radius: 2px;
+}
+
+.chain-link.broken {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.flow-arrow {
+    position: absolute;
+    right: -4px;
+    top: -5px;
+    width: 0; 
+    height: 0; 
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #8b5cf6;
+    filter: drop-shadow(0 0 4px rgba(139,92,246,0.6));
+}
+
+.chain-link.broken .flow-arrow {
+    border-left-color: #dc2626;
+    filter: drop-shadow(0 0 4px rgba(239,68,68,0.6));
+}
+
+/* Block Card */
+.mock-block-card {
+    width: 280px;
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    color: #f8fafc;
+}
+
+.mock-block-card:hover {
+    border-color: rgba(99, 102, 241, 0.8);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.3);
+}
+
+.mock-block-card.selected {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.4), 0 12px 40px 0 rgba(139, 92, 246, 0.3);
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.mock-block-card.genesis {
+    border-style: dashed;
+}
+
+.mock-block-card.invalid {
+    border-color: var(--danger);
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.mock-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.block-number {
+    font-weight: 800;
+    font-size: 14px;
+    color: #e2e8f0;
+    letter-spacing: 0.05em;
+}
+
+.block-type {
+    font-size: 12px;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 16px;
+    text-align: center;
+    padding: 6px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hash-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.hash-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hash-value {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #cbd5e1;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hash-value.highlight {
+    color: #a78bfa;
+    border-color: rgba(167, 139, 250, 0.3);
+    background: rgba(167, 139, 250, 0.1);
+    font-weight: 700;
+}
+
+.invalid .hash-value.highlight {
+    color: #f87171;
+    border-color: rgba(248, 113, 113, 0.3);
+    background: rgba(248, 113, 113, 0.1);
+}
+
+.tamper-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(239, 68, 68, 0.05);
+    pointer-events: none;
+    border-radius: var(--radius-md);
+}
+
+/* Bottom Grid */
+.mock-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 1100px) {
+    .mock-bottom-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mock-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blockchain-flow {
+        flex-direction: column;
+    }
+    
+    .chain-link {
+        width: 4px;
+        height: 40px;
+        margin: 12px 0;
+    }
+    
+    .flow-arrow {
+        right: auto;
+        left: -6px;
+        top: auto;
+        bottom: -2px;
+        border-top: 8px solid var(--brand-primary);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 0;
+    }
+    
+    .chain-link.broken .flow-arrow {
+        border-top-color: var(--danger);
+        border-left-color: transparent;
+    }
+}
+
+/* Simulation Log */
+.mock-simulation-log {
+    height: 100%;
+}
+
+.terminal-body {
+    background: #0f172a;
+    color: #38bdf8;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 16px;
+    height: 300px;
+    overflow-y: auto;
+    border-bottom-left-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md);
+}
+
+.log-entry {
+    margin-bottom: 6px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.log-time {
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+/* Merkle Lab */
+.mock-merkle-lab {
+    height: 100%;
+}
+
+.merkle-node {
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    display: inline-block;
+    box-shadow: var(--shadow-sm);
+}
+
+.root-node {
+    border-color: var(--brand-primary);
+}
+
+.node-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.node-hash {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--brand-primary);
+}
+
+.merkle-branches {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    position: relative;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.branch-line {
+    width: 2px;
+    background: var(--border-default);
+    height: 100%;
+    position: absolute;
+}
+
+.branch-line.left {
+    left: 20%;
+    transform: rotate(30deg);
+}
+
+.branch-line.right {
+    right: 20%;
+    transform: rotate(-30deg);
+}
+
+.merkle-leaves {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Inspector */
+.mock-inspector {
+    height: auto;
+}
+
+.highlight-prev {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+
+.verifying-pulse {
+    animation: pulse-border 1s infinite;
+}
+
+@keyframes pulse-border {
+    0% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(88, 101, 242, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0); }
+}
+
+.merkle-node.verified {
+    border-color: var(--success);
+    background: var(--success-subtle);
+}
+
+.merkle-node.invalid {
+    border-color: var(--danger);
+    background: var(--danger-subtle);
+}
+
+@keyframes bcFadeIn {
+    from { opacity: 0.85; }
+    to { opacity: 1; }
+}
+
+/* ─── Mock Lab Simulation View ────────────────────────────────────────────── */
+.bc-mock-container {
+    padding: 0 0 48px;
+    animation: bcFadeIn 0.14s ease-out;
+}
+
+.bc-mock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bc-mock-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bc-mock-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary, #f4f4f5);
+    margin: 0;
+}
+
+.bc-sim-pill {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: var(--radius-xs, 4px);
+    background: var(--warning-subtle, rgba(245, 158, 11, 0.15));
+    color: var(--warning, #f59e0b);
+    border: 1px solid var(--warning-border, rgba(245, 158, 11, 0.3));
+}
+
+.bc-mock-subtitle {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--text-secondary, #a1a1aa);
+}
+
+.bc-mock-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-md, 8px);
+    background: var(--warning-subtle, rgba(245, 158, 11, 0.08));
+    border: 1px solid var(--warning-border, rgba(245, 158, 11, 0.25));
+    color: var(--text-primary, #f4f4f5);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.bc-mock-warning-icon {
+    font-size: 16px;
+    color: var(--warning, #f59e0b);
+}
+
+/* ─── Light Mode Overrides ─────────────────────────────────────────────────── */
+[data-theme="light"] .mock-blockchain-canvas {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid var(--border-default);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.02), 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .mock-block-card {
+    background: #ffffff;
+    border: 1px solid var(--border-default);
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .mock-block-card:hover {
+    border-color: var(--brand-primary);
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.15);
+}
+
+[data-theme="light"] .mock-block-card.selected {
+    background: #ffffff;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3), 0 10px 24px rgba(139, 92, 246, 0.15);
+}
+
+[data-theme="light"] .mock-block-header {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .block-number {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .block-type {
+    color: #0284c7;
+    background: rgba(2, 132, 199, 0.08);
+    border-color: rgba(2, 132, 199, 0.2);
+}
+
+[data-theme="light"] .hash-label {
+    color: var(--text-tertiary);
+}
+
+[data-theme="light"] .hash-value {
+    color: var(--text-secondary);
+    background: #f1f5f9;
+    border: 1px solid var(--border-default);
+}
+
+[data-theme="light"] .hash-value.highlight {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.08);
+    border-color: rgba(124, 58, 237, 0.25);
+}
+
+[data-theme="light"] .invalid .hash-value.highlight {
+    color: #dc2626;
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+[data-theme="light"] .bc-mock-header {
+    border-bottom: 1px solid var(--border-default);
+}
+

@@ -1,0 +1,578 @@
+paths:
+  /api/zmail/account:
+    get:
+      summary: GET /account
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/counts:
+    get:
+      summary: GET /counts
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/inbox:
+    get:
+      summary: GET /inbox
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/sent:
+    get:
+      summary: GET /sent
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/drafts:
+    get:
+      summary: GET /drafts
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+    post:
+      summary: POST /drafts
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/starred:
+    get:
+      summary: GET /starred
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/important:
+    get:
+      summary: GET /important
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/archive:
+    get:
+      summary: GET /archive
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/trash:
+    get:
+      summary: GET /trash
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/all:
+    get:
+      summary: GET /all
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages:
+    post:
+      summary: POST /messages
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}:
+    get:
+      summary: GET /messages/:messageId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+    delete:
+      summary: DELETE /messages/:messageId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/reply:
+    post:
+      summary: POST /messages/:messageId/reply
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/forward:
+    post:
+      summary: POST /messages/:messageId/forward
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/read:
+    patch:
+      summary: PATCH /messages/:messageId/read
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/unread:
+    patch:
+      summary: PATCH /messages/:messageId/unread
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/star:
+    patch:
+      summary: PATCH /messages/:messageId/star
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/important:
+    patch:
+      summary: PATCH /messages/:messageId/important
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/archive:
+    patch:
+      summary: PATCH /messages/:messageId/archive
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/trash:
+    patch:
+      summary: PATCH /messages/:messageId/trash
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/restore:
+    patch:
+      summary: PATCH /messages/:messageId/restore
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/bulk/action:
+    patch:
+      summary: PATCH /messages/bulk/action
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/messages/{messageId}/attachments/{attachmentId}:
+    get:
+      summary: GET /messages/:messageId/attachments/:attachmentId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: messageId
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: attachmentId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/threads/{threadId}:
+    get:
+      summary: GET /threads/:threadId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: threadId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/threads/{threadId}/read:
+    patch:
+      summary: PATCH /threads/:threadId/read
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: threadId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/trash/empty:
+    delete:
+      summary: DELETE /trash/empty
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/drafts/{draftId}:
+    get:
+      summary: GET /drafts/:draftId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: draftId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+    patch:
+      summary: PATCH /drafts/:draftId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: draftId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+    delete:
+      summary: DELETE /drafts/:draftId
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: draftId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/drafts/{draftId}/send:
+    post:
+      summary: POST /drafts/:draftId/send
+      tags: [Zmail]
+      parameters:
+        - in: path
+          name: draftId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/search:
+    get:
+      summary: GET /search
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/users/search:
+    get:
+      summary: GET /users/search
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/attachments/upload:
+    post:
+      summary: POST /attachments/upload
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/zmail/admin/backfill:
+    post:
+      summary: POST /admin/backfill
+      tags: [Zmail]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error

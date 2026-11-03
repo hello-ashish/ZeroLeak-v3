@@ -1,0 +1,154 @@
+/* ─── Design Tokens (V2 Premium Academic Operations) ──────── */
+:root {
+  color-scheme: dark;
+
+  /* Brand */
+  --brand-primary: #3b82f6;
+  /* A trusted, academic blue */
+  --brand-primary-hover: #2563eb;
+  --brand-primary-subtle: rgba(59, 130, 246, 0.1);
+  --brand-primary-border: rgba(59, 130, 246, 0.3);
+  --brand-accent: #8b5cf6;
+  --brand-secondary: #8b5cf6;
+
+  /* Base Dark Colors (Default state, JS engine will interpolate if needed) */
+  --bg-app: #09090b;
+  --bg-surface: #121214;
+  --bg-elevated: #1a1a1d;
+  --bg-card: #121214;
+  --bg-overlay: #222225;
+  --bg-hover: rgba(255, 255, 255, 0.035);
+  --bg-active: rgba(255, 255, 255, 0.06);
+  --bg-input: #121214;
+  --bg-base: #09090b;
+  --bg-body: #121214;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --text-disabled: #3f3f46;
+  --text-inverse: #09090b;
+
+  /* Borders (Extremely subtle) */
+  --border-focus: rgba(59, 130, 246, 0.5);
+
+  /* Semantics */
+  --success: #10b981;
+  --success-subtle: rgba(16, 185, 129, 0.1);
+  --success-border: rgba(16, 185, 129, 0.2);
+
+  --warning: #f59e0b;
+  --warning-subtle: rgba(245, 158, 11, 0.1);
+  --warning-border: rgba(245, 158, 11, 0.2);
+
+  --danger: #ef4444;
+  --danger-subtle: rgba(239, 68, 68, 0.1);
+  --danger-border: rgba(239, 68, 68, 0.2);
+
+  --info: #3b82f6;
+  --info-subtle: rgba(59, 130, 246, 0.1);
+
+  --neutral: #71717a;
+  --neutral-subtle: rgba(113, 113, 122, 0.15);
+
+  /* Exam Status (Refined) */
+  --status-draft: #71717a;
+  --status-draft-bg: rgba(113, 113, 122, 0.15);
+  --status-scheduled: #f59e0b;
+  --status-scheduled-bg: rgba(245, 158, 11, 0.15);
+  --status-live: #10b981;
+  --status-live-bg: rgba(16, 185, 129, 0.15);
+  --status-completed: #3b82f6;
+  --status-completed-bg: rgba(59, 130, 246, 0.15);
+  --status-archived: #52525b;
+  --status-archived-bg: rgba(82, 82, 91, 0.15);
+
+  /* Typography System */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Sizing */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --topbar-height: 64px;
+
+  /* Advanced Shadows for Depth */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  --shadow-float: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  --shadow-glow: 0 0 0 2px var(--bg-app), 0 0 0 4px var(--brand-primary-border);
+
+  /* Precise Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Motion */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Hierarchy */
+  --z-sidebar: 100;
+  --z-topbar: 110;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-command: 400;
+  --z-toast: 500;
+}
+
+/* ─── Light Mode Palette & Token Overrides ──────── */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-app: #f4f4f5;
+  --bg-surface: #ffffff;
+  --bg-elevated: #fafafa;
+  --bg-card: #ffffff;
+  --bg-overlay: #ffffff;
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-active: rgba(0, 0, 0, 0.08);
+  --bg-input: #ffffff;
+  --bg-base: #f4f4f5;
+  --bg-body: #ffffff;
+
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --border-default: rgba(0, 0, 0, 0.1);
+  --border-strong: rgba(0, 0, 0, 0.18);
+
+  --text-primary: #09090b;
+  --text-secondary: #52525b;
+  --text-tertiary: #71717a;
+  --text-disabled: #a1a1aa;
+  --text-inverse: #ffffff;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.04);
+  --shadow-float: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Explicit Dark Mode (when set explicitly on root) ──── */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* ─── Smooth theme transitions (activated temporarily when user toggles) ─── */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+              fill 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}

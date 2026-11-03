@@ -1,0 +1,293 @@
+paths:
+  /api/support/login:
+    post:
+      summary: POST /login
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/constants:
+    get:
+      summary: GET /constants
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets:
+    post:
+      summary: POST /tickets
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+    get:
+      summary: GET /tickets
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/my-tickets:
+    get:
+      summary: GET /my-tickets
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/my-tickets/{ticketId}:
+    get:
+      summary: GET /my-tickets/:ticketId
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/my-tickets/{ticketId}/reply:
+    post:
+      summary: POST /my-tickets/:ticketId/reply
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/profile:
+    put:
+      summary: PUT /profile
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/global-history:
+    get:
+      summary: GET /global-history
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/stats:
+    get:
+      summary: GET /stats
+      tags: [Support]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}:
+    get:
+      summary: GET /tickets/:ticketId
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}/status:
+    patch:
+      summary: PATCH /tickets/:ticketId/status
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}/priority:
+    patch:
+      summary: PATCH /tickets/:ticketId/priority
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}/assign:
+    patch:
+      summary: PATCH /tickets/:ticketId/assign
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}/reply:
+    post:
+      summary: POST /tickets/:ticketId/reply
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}/notes:
+    post:
+      summary: POST /tickets/:ticketId/notes
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+    get:
+      summary: GET /tickets/:ticketId/notes
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/support/tickets/{ticketId}/history:
+    get:
+      summary: GET /tickets/:ticketId/history
+      tags: [Support]
+      parameters:
+        - in: path
+          name: ticketId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error

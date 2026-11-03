@@ -1,0 +1,33 @@
+paths:
+  /api/admin/examinations:
+    get:
+      summary: Get all examinations
+      tags: [Examination]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Examinations list
+    post:
+      summary: Create a new examination
+      tags: [Examination]
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Examination created
+  /api/admin/examinations/{id}/status:
+    patch:
+      summary: Update examination status (e.g., active, completed)
+      tags: [Examination]
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Status updated

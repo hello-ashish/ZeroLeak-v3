@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: zeroleak-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: MONGODB_URI
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: ACCESS_TOKEN_SECRET
+        sync: false
+      - key: QUESTION_ENCRYPTION_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: ADMIN_BOOTSTRAP_SECRET
+        sync: false
+      - key: AUDITOR_BOOTSTRAP_SECRET
+        sync: false
+      - key: BLOCKCHAIN_MODE
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: AI_MODEL
+        sync: false

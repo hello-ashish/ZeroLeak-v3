@@ -1,0 +1,243 @@
+/* ─── ZeroLeak Admin Activity Page Styles ────────────────────── */
+
+.audit-details-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    max-width: 440px;
+}
+
+.audit-chip-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.audit-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2.5px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.audit-chip-ai {
+    background: rgba(139, 92, 246, 0.12);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.28);
+}
+
+.audit-chip-version {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    font-family: var(--font-mono);
+}
+
+.audit-chip-hash {
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
+    font-family: var(--font-mono);
+    cursor: pointer;
+    user-select: none;
+}
+
+.audit-chip-hash:hover {
+    border-color: var(--brand-primary);
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+.audit-chip-kv {
+    background: var(--bg-hover);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+    font-size: 11px;
+}
+
+.audit-chip-kv strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.audit-inspect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4.5px;
+    padding: 2.5px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.audit-inspect-btn:hover {
+    background: var(--brand-primary-subtle);
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+}
+
+.audit-text-details {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ─── Actor Cell ──────────────────────────────────────────────── */
+.audit-actor-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+}
+
+.audit-actor-role {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.audit-actor-role.role-admin {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.audit-actor-role.role-professor {
+    background: rgba(139, 92, 246, 0.12);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.audit-actor-role.role-student {
+    background: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.audit-actor-role.role-auditor {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.audit-actor-role.role-support {
+    background: rgba(14, 165, 233, 0.12);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.25);
+}
+
+.audit-actor-role.role-system {
+    background: var(--bg-hover);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-default);
+}
+
+.audit-actor-id {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ─── Target Badge ────────────────────────────────────────────── */
+.audit-target-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    background: var(--bg-hover);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+}
+
+/* ─── Detail Modal ────────────────────────────────────────────── */
+.audit-modal-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+    background: var(--bg-surface);
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-default);
+}
+
+.audit-modal-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.audit-modal-meta-lbl {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.audit-modal-meta-val {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    word-break: break-all;
+}
+
+.audit-modal-json-container {
+    background: var(--bg-body);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.audit-modal-json-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-default);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.audit-modal-json-pre {
+    padding: 16px;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    overflow: auto;
+    max-height: 380px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}

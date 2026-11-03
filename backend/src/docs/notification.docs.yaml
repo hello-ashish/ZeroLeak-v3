@@ -1,0 +1,46 @@
+paths:
+  /api/notifications:
+    get:
+      summary: GET /
+      tags: [Notification]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/notifications/{id}/read:
+    patch:
+      summary: PATCH /:id/read
+      tags: [Notification]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/notifications/read-all:
+    patch:
+      summary: PATCH /read-all
+      tags: [Notification]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error

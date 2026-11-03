@@ -1,0 +1,28 @@
+paths:
+  /api/anti-cheating/incident:
+    post:
+      summary: Record a cheating incident for a student
+      tags: [Anti-Cheating]
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Incident recorded
+  /api/anti-cheating/incidents:
+    get:
+      summary: Get all reported cheating incidents (Admin/Auditor)
+      tags: [Anti-Cheating]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of incidents
+  /api/anti-cheating/terminate:
+    post:
+      summary: Terminate an exam attempt due to severe violation
+      tags: [Anti-Cheating]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Attempt terminated

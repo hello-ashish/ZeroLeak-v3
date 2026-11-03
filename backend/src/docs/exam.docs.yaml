@@ -1,0 +1,27 @@
+paths:
+  /api/exams:
+    get:
+      summary: Get all exams (Admin)
+      tags: [Exam]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of exams
+    post:
+      summary: Create a new exam (Admin)
+      tags: [Exam]
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Exam created
+  /api/exams/results:
+    get:
+      summary: Get all exam results (Admin)
+      tags: [Exam]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of results

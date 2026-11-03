@@ -1,0 +1,14 @@
+.batch-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.batch-form-input {
+  background: var(--bg-input);
+  border: 1px solid var(--border-default);
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--text-primary);
+}
+

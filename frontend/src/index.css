@@ -1,0 +1,9 @@
+/* ═══════════════════════════════════════════════════════════
+   ZeroLeak — Academic Command Center Design System
+   Premium Dark Mode UI with Light Mode Support
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "./styles/variables.css";
+@import "./styles/global.css";

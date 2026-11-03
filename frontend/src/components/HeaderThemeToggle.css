@@ -1,0 +1,71 @@
+/* ─── Header Theme Toggle Button & Animations ──────── */
+.header-theme-toggle {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.header-theme-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.header-theme-toggle:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.theme-toggle-icon-wrap {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-sun-icon,
+.theme-moon-icon {
+  position: absolute;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.25s ease,
+              color 0.25s ease;
+}
+
+/* Dark mode state: show glowing sun, rotate moon out */
+.header-theme-toggle.is-dark .theme-sun-icon {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  color: #fbbf24;
+  filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.45));
+}
+
+.header-theme-toggle.is-dark .theme-moon-icon {
+  transform: rotate(90deg) scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Light mode state: show sleek indigo moon, rotate sun out */
+.header-theme-toggle.is-light .theme-moon-icon {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  color: #6366f1;
+  filter: drop-shadow(0 0 4px rgba(99, 102, 241, 0.35));
+}
+
+.header-theme-toggle.is-light .theme-sun-icon {
+  transform: rotate(-90deg) scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.theme-toggle-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}

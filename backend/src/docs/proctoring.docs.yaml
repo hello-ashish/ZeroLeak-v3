@@ -1,0 +1,180 @@
+paths:
+  /api/proctoring/live:
+    get:
+      summary: GET /live
+      tags: [Proctoring]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/alerts:
+    get:
+      summary: GET /alerts
+      tags: [Proctoring]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/active-exams:
+    get:
+      summary: GET /active-exams
+      tags: [Proctoring]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/sessions:
+    get:
+      summary: GET /sessions
+      tags: [Proctoring]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/sessions/{sessionId}:
+    get:
+      summary: GET /sessions/:sessionId
+      tags: [Proctoring]
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/sessions/{sessionId}/incidents:
+    get:
+      summary: GET /sessions/:sessionId/incidents
+      tags: [Proctoring]
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/sessions/{sessionId}/ai-events:
+    get:
+      summary: GET /sessions/:sessionId/ai-events
+      tags: [Proctoring]
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/sessions/{sessionId}/end:
+    post:
+      summary: POST /sessions/:sessionId/end
+      tags: [Proctoring]
+      parameters:
+        - in: path
+          name: sessionId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/exams/{examId}/sessions:
+    get:
+      summary: GET /exams/:examId/sessions
+      tags: [Proctoring]
+      parameters:
+        - in: path
+          name: examId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/students/{studentId}/incidents:
+    get:
+      summary: GET /students/:studentId/incidents
+      tags: [Proctoring]
+      parameters:
+        - in: path
+          name: studentId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+  /api/proctoring/incidents:
+    get:
+      summary: GET /incidents
+      tags: [Proctoring]
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error

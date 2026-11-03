@@ -1,0 +1,51 @@
+paths:
+  /api/professor/login:
+    post:
+      summary: Login for professors
+      tags: [Professor]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                professorId:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login successful
+  /api/professor/batches:
+    get:
+      summary: Get all batches created by the professor
+      tags: [Professor]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of batches
+    post:
+      summary: Create a new batch of questions
+      tags: [Professor]
+      security:
+        - bearerAuth: []
+      responses:
+        "201":
+          description: Batch created
+  /api/professor/batches/{batchId}/questions:
+    post:
+      summary: Add a question to a specific batch
+      tags: [Professor]
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: batchId
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          description: Question added
